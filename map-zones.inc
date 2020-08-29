@@ -795,7 +795,7 @@ static stock _GetMapZoneLoopStartIndex(Float:x) {
 
 #define GetMapZoneAtPoint3D GetMapZoneAtPoint
 stock MapZone:GetMapZoneAtPoint(Float:x, Float:y, Float:z) {
-	if (!(-2997.469970 <= x < 2997.060058) || !(-2892.969970 <= y < 2993.870117) || !(-242.990005 <= z < 900.000000)) {
+	if (!(-2997.469970 <= x < 2997.060058) || !(-2892.969970 <= y < 2993.870117) || !(-242.990005 <= z <= 900.000000)) {
 		return INVALID_MAP_ZONE_ID;
 	}
 
