@@ -915,6 +915,15 @@ stock bool:GetMapZoneAreaCount(MapZone:id, &count) {
 	return true;
 }
 
+stock bool:GetMapZoneAreaCode(MapZone:id, &code = 999) {
+	if (!IsValidMapZone(id)) {
+		return false;
+	}
+
+	code = MapZoneData[_:id][E_MAP_ZONE_AREA_CODE];
+	return true;
+}
+
 
 stock GetMapZoneAreaPos(MapZone:id, &Float:minX = 0.0, &Float:minY = 0.0, &Float:minZ = 0.0, &Float:maxX = 0.0, &Float:maxY = 0.0, &Float:maxZ = 0.0, start = 0) {
 	if (!IsValidMapZone(id) || start < 0) {
